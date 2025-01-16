@@ -1,10 +1,16 @@
-from PySide6.QtWidgets import QApplication, QWidget
+from PySide6.QtWidgets import QApplication, QMainWindow, QWidget, QPushButton
 import sys
 
-app = QApplication(sys.argv)
+class Typify(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("Typify")
+        self.resize(900, 550)
 
-window = QWidget()
-window.setWindowTitle("Typify")
-window.show()
+if __name__=="__main__":
+    app = QApplication(sys.argv)
 
-app.exec()
+    window = Typify()
+    window.show()
+
+    app.exec()
