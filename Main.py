@@ -4,6 +4,7 @@ import sys
 app = QApplication(sys.argv)
 
 window = QWidget()
+window.setWindowTitle("Typify")
 window.show()
 
 app.exec()
