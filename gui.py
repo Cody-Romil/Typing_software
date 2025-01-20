@@ -5,7 +5,7 @@ class GUI(QMainWindow):
     def __init__(self):
         super().__init__()
         self.font = "Constantia"
-        self.margin = 40
+        self.margin = 35
         self.setWindowTitle("Typify")
-        self.setFixedSize(900, 550)
+        # self.setFixedSize(900, 500)
         

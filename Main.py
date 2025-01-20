@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QApplication, QLabel, QWidget, QPushButton
+from PySide6.QtWidgets import QApplication, QLabel, QWidget, QPushButton, QSpacerItem, QSizePolicy
 from PySide6.QtWidgets import QGridLayout, QVBoxLayout, QHBoxLayout
 from PySide6.QtGui import QFont
 from gui import GUI
@@ -38,14 +38,14 @@ class construct_main(GUI):
         self.btn_layout.addWidget(self.lessn_btn, 0, 1)
         self.btn_layout.addWidget(self.stats_btn, 1, 0)
         self.btn_layout.addWidget(self.supp_btn, 1, 1)
-        self.btn_layout.setSpacing(0)
-        self.btn_layout.setContentsMargins(self.margin, self.margin, self.margin, self.margin)
+        self.btn_layout.setContentsMargins(0, self.margin, self.margin, self.margin)
+        self.btn_grp.setStyleSheet("padding: 25px;")
         self.btn_grp.setLayout(self.btn_layout)
 
         self.t_layout.addWidget(self.heading)
         self.t_layout.addWidget(self.desc)
-        self.t_layout.setSpacing(0)
-        self.t_layout.setContentsMargins(self.margin, self.margin, self.margin, self.margin)
+        self.t_layout.setContentsMargins(self.margin, 0, self.margin, self.margin)
+        # self.text.setStyleSheet("padding: 10px;")
         self.text.setLayout(self.t_layout)
 
         self.main_layout.addWidget(self.text)
